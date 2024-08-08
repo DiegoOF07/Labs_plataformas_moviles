@@ -7,6 +7,8 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
@@ -26,7 +28,7 @@ import com.diegoflores.labs.R
 
 @Composable
 fun Caratula(modifier: Modifier = Modifier){
-    Box(modifier = Modifier){
+    Box(modifier = Modifier.fillMaxSize()){
         Image(
             painter = painterResource(id = R.mipmap.logo_uvg),
             contentDescription = "MainLogo",
@@ -36,7 +38,7 @@ fun Caratula(modifier: Modifier = Modifier){
                 .graphicsLayer(alpha = 0.2f)
         )
     }
-    Column(modifier = Modifier.border(5.dp, Color.Green), verticalArrangement = Arrangement.Center) {
+    Column(modifier = Modifier.fillMaxHeight().border(5.dp, Color(0x27, 0x38, 0x28, 0xFF)), verticalArrangement = Arrangement.Center) {
         Box(modifier = Modifier.fillMaxWidth()) {
             Text("Universidad del Valle de Guatemala",
                 modifier = Modifier.fillMaxWidth(),
