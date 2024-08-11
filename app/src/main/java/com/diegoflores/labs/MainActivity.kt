@@ -10,7 +10,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.diegoflores.labs.Lab4.Caratula
+import com.diegoflores.labs.Lab5.MyView
 import com.diegoflores.labs.ui.theme.LabsTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             LabsTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Caratula(modifier = Modifier.padding(innerPadding))
+                    MyView(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
@@ -32,6 +32,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GreetingPreview() {
     LabsTheme {
-        Caratula()
+        MyView()
     }
 }
